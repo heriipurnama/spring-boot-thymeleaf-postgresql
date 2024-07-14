@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Member List</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div>
+    <h1>Member List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="member : ${members}">
+            <td th:text="${member.id}">1</td>
+            <td th:text="${member.name}">Name</td>
+            <td th:text="${member.email}">Email</td>
+            <td th:text="${member.dob}">Date of Birth</td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/admin/members/export/excel}">Export to Excel</a>
+    <a th:href="@{/admin/members/export/pdf}">Export to PDF</a>
+</div>
+</body>
+</html>

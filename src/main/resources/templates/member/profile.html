@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div>
+    <h1>Profile</h1>
+    <div>
+        <label>ID:</label>
+        <span th:text="${member.id}">1</span>
+    </div>
+    <div>
+        <label>Name:</label>
+        <span th:text="${member.name}">John Doe</span>
+    </div>
+    <div>
+        <label>Email:</label>
+        <span th:text="${member.email}">john.doe@example.com</span>
+    </div>
+    <div>
+        <label>Date of Birth:</label>
+        <span th:text="${member.dob}">2000-01-01</span>
+    </div>
+</div>
+</body>
+</html>
